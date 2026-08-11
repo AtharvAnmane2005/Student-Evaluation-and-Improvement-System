@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Env
+.env
+*.env.local
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# ML artifacts (large binary files — use Git LFS)
+*.bin
+*.pt
+*.safetensors
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Storage (local dev file uploads)
+backend/storage/
+
+# MongoDB data (bind-mounted for local dev)
+mongodb-data/

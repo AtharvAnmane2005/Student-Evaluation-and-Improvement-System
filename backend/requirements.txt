@@ -1,0 +1,52 @@
+# --- Web framework ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# --- Config & validation ---
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+
+# --- Database (async MongoDB) ---
+motor==3.5.1
+pymongo==4.8.0
+
+# --- Auth ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.0
+google-auth==2.35.0
+requests==2.32.3
+
+# --- Rate limiting ---
+slowapi==0.1.9
+
+# --- Utilities ---
+python-dotenv==1.0.1
+tenacity==9.0.0
+cloudinary==1.41.0
+
+# --- Testing ---
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.27.2
+mongomock-motor==0.0.34
+
+# --- Resume parsing (Phase 6) ---
+pymupdf==1.24.10
+pdfplumber==0.11.4
+spacy==3.7.6
+
+# --- ML / semantic matching (Phase 7/9) ---
+# Deliberately plain `transformers` + `torch`, NOT `sentence-transformers` —
+# see PROJECT_PROGRESS.md Phase 7/9 section: the trained cross-encoder was
+# saved in sentence-transformers 5.x's newer CrossEncoder format, which an
+# older sentence-transformers install can't reliably load. Loading via
+# AutoModel/AutoModelForSequenceClassification only depends on standard
+# config.json + model.safetensors + tokenizer files, which are stable
+# regardless of which wrapper library saved them.
+torch==2.4.1
+transformers==4.45.2
+scikit-learn==1.6.1
+numpy==1.26.4
